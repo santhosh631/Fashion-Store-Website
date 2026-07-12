@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA Couture | Premium Fashion Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="home-page">
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">AURA<span>.</span></a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="cart.html" class="nav-btn">
+                🛒
+                <span class="cart-count" id="cart-badge-count" style="display: none;">0</span>
+            </a>
+            <div class="auth-nav" id="navbar-auth">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Hero Banner Slider -->
+        <section class="hero">
+            <div class="slider-container">
+                <!-- Slide 1 -->
+                <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600&auto=format&fit=crop&q=80');">
+                    <div class="slide-content">
+                        <span class="slide-subtitle">Aura Summer Edit</span>
+                        <h1 class="slide-title">Elegance Redefined</h1>
+                        <p class="slide-text">Experience the luxury of premium tailoring and handpicked silhouettes. Designed for the modern trendsetter.</p>
+                        <a href="products.html" class="btn btn-primary">Shop Collection</a>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1600&auto=format&fit=crop&q=80');">
+                    <div class="slide-content">
+                        <span class="slide-subtitle">Classic Minimalist</span>
+                        <h1 class="slide-title">Timeless Style</h1>
+                        <p class="slide-text">Clean color palettes, soft cotton fabrics, and structures that flow effortlessly with your everyday life.</p>
+                        <a href="products.html" class="btn btn-primary">Explore Shop</a>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600&auto=format&fit=crop&q=80');">
+                    <div class="slide-content">
+                        <span class="slide-subtitle">Signature Accessories</span>
+                        <h1 class="slide-title">Bold Details</h1>
+                        <p class="slide-text">Complete your attire with premium leather boots, chronograph wristwatches, and minimalist sunglasses.</p>
+                        <a href="products.html" class="btn btn-primary">Discover More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slider Dots navigation -->
+            <div class="slider-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="section" style="background-color: var(--bg-secondary);">
+            <h2 class="section-title">
+                <span>Curated Selection</span>
+                Shop By Category
+            </h2>
+            <div class="category-grid">
+                <!-- Category 1 -->
+                <div class="category-card" onclick="window.location.href='products.html'">
+                    <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=500&auto=format&fit=crop&q=60" alt="Men's Clothing">
+                    <div class="category-card-content">
+                        <h3 class="category-card-title">Men's Apparel</h3>
+                        <span class="category-card-link">View Collection</span>
+                    </div>
+                </div>
+                <!-- Category 2 -->
+                <div class="category-card" onclick="window.location.href='products.html'">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60" alt="Women's Clothing">
+                    <div class="category-card-content">
+                        <h3 class="category-card-title">Women's Couture</h3>
+                        <span class="category-card-link">View Collection</span>
+                    </div>
+                </div>
+                <!-- Category 3 -->
+                <div class="category-card" onclick="window.location.href='products.html'">
+                    <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=500&auto=format&fit=crop&q=60" alt="Footwear">
+                    <div class="category-card-content">
+                        <h3 class="category-card-title">Premium Footwear</h3>
+                        <span class="category-card-link">View Collection</span>
+                    </div>
+                </div>
+                <!-- Category 4 -->
+                <div class="category-card" onclick="window.location.href='products.html'">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&auto=format&fit=crop&q=60" alt="Accessories">
+                    <div class="category-card-content">
+                        <h3 class="category-card-title">Lux Accessories</h3>
+                        <span class="category-card-link">View Collection</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="section">
+            <h2 class="section-title">
+                <span>Trending Now</span>
+                Featured Arrivals
+            </h2>
+            <div class="products-grid" id="featured-products-grid">
+                <!-- Loaded Dynamically -->
+                <div class="text-center w-100">Loading products...</div>
+            </div>
+            <div class="text-center mt-3">
+                <a href="products.html" class="btn btn-outline">View Entire Catalog</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 1rem;">AURA<span>.</span></h4>
+                <p style="color: var(--color-muted); font-size: 0.85rem; max-width: 250px;">Elevating wardrobes since 2026. A premium shopping experience with bespoke fashion selections.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Collections</h4>
+                <ul class="footer-links">
+                    <li><a href="products.html">Men's Clothing</a></li>
+                    <li><a href="products.html">Women's Clothing</a></li>
+                    <li><a href="products.html">Footwear</a></li>
+                    <li><a href="products.html">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Store Locator</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Care</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Support</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">Size Guides</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Aura Fashion Store. Designed in elegance. Powered by <span>Antigravity</span>.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

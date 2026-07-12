@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA Couture | Customer Sign In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="login-page">
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">AURA<span>.</span></a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="cart.html" class="nav-btn">
+                🛒
+                <span class="cart-count" id="cart-badge-count" style="display: none;">0</span>
+            </a>
+            <div class="auth-nav" id="navbar-auth">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Auth Form -->
+    <main class="main-content">
+        <div class="auth-container">
+            <h2 class="auth-title">Welcome Back</h2>
+            <form class="auth-form" id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email Address</label>
+                    <input type="email" id="login-email" class="form-control" placeholder="name@domain.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" class="form-control" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100" style="margin-top: 1rem;">Sign In</button>
+            </form>
+            <div class="auth-footer">
+                <p>New to Aura? <a href="register.html">Create an Account</a></p>
+                <div style="margin-top: 1.5rem; border-top: 1px solid var(--border-subtle); padding-top: 1rem; font-size: 0.75rem;">
+                    <p>Testing Admin Access: <strong>admin@fashion.com</strong> / <strong>admin123</strong></p>
+                    <p>Testing Customer Access: <strong>rahul@gmail.com</strong> / <strong>password123</strong></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bottom" style="border: none; padding: 0;">
+            <p>&copy; 2026 Aura Fashion Store. Designed in elegance. Powered by <span>Antigravity</span>.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

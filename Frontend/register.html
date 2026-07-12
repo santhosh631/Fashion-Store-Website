@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA Couture | Customer Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="register-page">
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">AURA<span>.</span></a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="cart.html" class="nav-btn">
+                🛒
+                <span class="cart-count" id="cart-badge-count" style="display: none;">0</span>
+            </a>
+            <div class="auth-nav" id="navbar-auth">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Auth Form -->
+    <main class="main-content">
+        <div class="auth-container" style="max-width: 500px; padding: 2.5rem 2rem;">
+            <h2 class="auth-title">Create Account</h2>
+            <form class="auth-form" id="register-form">
+                <div class="form-group">
+                    <label for="reg-fullname">Full Name</label>
+                    <input type="text" id="reg-fullname" class="form-control" placeholder="Rahul Sharma" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email Address</label>
+                    <input type="email" id="reg-email" class="form-control" placeholder="rahul@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-phone">Phone Number</label>
+                    <input type="tel" id="reg-phone" class="form-control" placeholder="9876543210" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-address">Delivery Address</label>
+                    <input type="text" id="reg-address" class="form-control" placeholder="KPHB Colony, Apartment 202" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-city">City</label>
+                    <input type="text" id="reg-city" class="form-control" placeholder="Hyderabad" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Password</label>
+                    <input type="password" id="reg-password" class="form-control" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100" style="margin-top: 1rem;">Register</button>
+            </form>
+            <div class="auth-footer">
+                <p>Already have an account? <a href="login.html">Sign In</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bottom" style="border: none; padding: 0;">
+            <p>&copy; 2026 Aura Fashion Store. Designed in elegance. Powered by <span>Antigravity</span>.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

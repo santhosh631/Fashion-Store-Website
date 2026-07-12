@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA Couture | Administrative Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="dashboard-page">
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">AURA<span>.</span></a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="cart.html" class="nav-btn">
+                🛒
+                <span class="cart-count" id="cart-badge-count" style="display: none;">0</span>
+            </a>
+            <div class="auth-nav" id="navbar-auth">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Administrative Console</h1>
+        <p>Control inventory levels, categories, users, and customer purchases.</p>
+    </header>
+
+    <!-- Main Dashboard Section -->
+    <main class="main-content section" style="padding-top: 3rem;">
+        
+        <div class="dashboard-layout">
+            
+            <!-- Sidebar Navigation -->
+            <aside class="dashboard-sidebar">
+                <h3 class="sidebar-title">Management</h3>
+                <nav class="dashboard-tabs">
+                    <button class="dashboard-tab active" data-tab="products">👚 Products</button>
+                    <button class="dashboard-tab" data-tab="categories">📁 Categories</button>
+                    <button class="dashboard-tab" data-tab="customers">👥 Customers</button>
+                    <button class="dashboard-tab" data-tab="orders">📦 Orders</button>
+                </nav>
+            </aside>
+
+            <!-- Main Panel Content -->
+            <section class="dashboard-content-panel">
+                <div class="panel-header">
+                    <h2 class="panel-title" id="dashboard-panel-title">Manage Products</h2>
+                    <button class="btn btn-primary" id="dashboard-add-btn" style="padding: 0.6rem 1.5rem; font-size: 0.75rem;">➕ Add New</button>
+                </div>
+                
+                <div class="admin-table-container">
+                    <table class="admin-table">
+                        <thead id="admin-table-head">
+                            <!-- Populated dynamically based on active tab -->
+                        </thead>
+                        <tbody id="admin-table-body">
+                            <!-- Populated dynamically based on active tab -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Form Modal Popups (Shared for CRUD: Add/Edit) -->
+    <div class="modal" id="dashboard-modal">
+        <div class="modal-content">
+            <button class="modal-close">✕</button>
+            <h3 class="modal-title" id="modal-title-text">Add Item</h3>
+            <form id="dashboard-form" class="auth-form">
+                <!-- Inner Fields dynamically set depending on the active model panel -->
+                <div id="modal-fields-container"></div>
+                
+                <button type="submit" class="btn btn-primary w-100" style="margin-top: 1rem;">Save Record</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 Aura Fashion Store. Designed in elegance. Powered by <span>Antigravity</span>.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

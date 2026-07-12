@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA Couture | Discover Apparel & Accessories</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="products-page">
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">AURA<span>.</span></a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="cart.html" class="nav-btn">
+                🛒
+                <span class="cart-count" id="cart-badge-count" style="display: none;">0</span>
+            </a>
+            <div class="auth-nav" id="navbar-auth">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Bespoke Catalog</h1>
+        <p>Browse through high-quality luxury selections tailored for your daily outfits.</p>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="main-content section" style="padding-top: 3rem;">
+        
+        <!-- Filters Panel -->
+        <div class="filters-panel">
+            <div class="form-group">
+                <label for="search-input">Search Catalog</label>
+                <input type="text" id="search-input" class="form-control" placeholder="Search by name, brand...">
+            </div>
+            
+            <div class="form-group">
+                <label for="category-filter">Category</label>
+                <select id="category-filter" class="form-control">
+                    <option value="">All Categories</option>
+                    <!-- Populated dynamically -->
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="price-filter">Max Price: <span id="price-val" style="color: var(--accent-gold); font-weight: 600;">₹15000</span></label>
+                <input type="range" id="price-filter" min="0" max="15000" step="50" value="15000" class="form-control" style="padding: 0.5rem 0;">
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="products-catalog-grid">
+            <!-- Populated dynamically -->
+            <div class="text-center w-100">Loading catalog products...</div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 Aura Fashion Store. Designed in elegance. Powered by <span>Antigravity</span>.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
